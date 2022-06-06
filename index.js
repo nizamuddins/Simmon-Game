@@ -11,7 +11,7 @@ let level = 0;
 
 // keypress
 
-body.keypress(() => {
+body.keydown(() => {
     if (!started) {
         sequence();
         started = true;
