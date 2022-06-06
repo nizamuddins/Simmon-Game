@@ -10,18 +10,11 @@ let level = 0;
 
 // keypress
 
-$(window).resize(() => {
-console.log($(this).innerWidth())
-    if ($(this).innerWidth() < 1128) {
-        body.click((e) => {
-            if (!started) {
-                sequence();
-                started = true;
-            }
-        })
-
+body.click(() => {
+    if (!started) {
+        sequence();
+        started = true;
     }
-
 })
 
 body.keypress(() => {
@@ -59,10 +52,11 @@ function correctSequence(current) {
         }
 
     } else {
-        head.text("game  over, press  any  key to restart");
+        head.text("game over, press any key to restart");
 
         Sound("wrong");
         bodyBackground();
+        reset();
 
     }
 
