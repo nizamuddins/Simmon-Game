@@ -11,8 +11,9 @@ let level = 0;
 // keypress
 
 $(window).resize(() => {
-    if ($(this).innerWidth() < 1012) {
-        body.click(() => {
+console.log($(this).innerWidth())
+    if ($(this).innerWidth() < 1128) {
+        body.click((e) => {
             if (!started) {
                 sequence();
                 started = true;
@@ -23,7 +24,7 @@ $(window).resize(() => {
 
 })
 
-body.keydown(() => {
+body.keypress(() => {
     if (!started) {
         sequence();
         started = true;
