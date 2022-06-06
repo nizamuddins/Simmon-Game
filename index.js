@@ -8,8 +8,20 @@ let started = false;
 
 let level = 0;
 
-
 // keypress
+
+$(window).resize(() => {
+    if ($(this).innerWidth() < 1012) {
+        body.click(() => {
+            if (!started) {
+                sequence();
+                started = true;
+            }
+        })
+
+    }
+
+})
 
 body.keydown(() => {
     if (!started) {
