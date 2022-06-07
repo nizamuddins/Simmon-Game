@@ -78,7 +78,7 @@ function correctSequence(current) {
 
         Sound("wrong");
         bodyBackground();
-
+        started = true
     }
 
 }
