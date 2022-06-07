@@ -10,14 +10,36 @@ let level = 0;
 
 // keypress
 
-body.click(() => {
-    if (!started) {
-        sequence();
-        started = true;
+body.click((e) => {
+    if ($(e.target).hasClass("body")) {
+        if (!started) {
+            sequence();
+            started = true;
+        }
     }
+    if ($(e.target).hasClass("row")) {
+        if (!started) {
+            sequence();
+            started = true;
+        }
+    }
+    if ($(e.target).hasClass("row1")) {
+        if (!started) {
+            sequence();
+            started = true;
+        }
+    }
+    if ($(e.target).hasClass("row2")) {
+        if (!started) {
+            sequence();
+            started = true;
+        }
+    }
+
 })
 
 body.keypress(() => {
+
     if (!started) {
         sequence();
         started = true;
@@ -56,7 +78,6 @@ function correctSequence(current) {
 
         Sound("wrong");
         bodyBackground();
-        reset();
 
     }
 
