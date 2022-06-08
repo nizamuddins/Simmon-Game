@@ -74,11 +74,12 @@ function correctSequence(current) {
         }
 
     } else {
+        level = 0;
         head.text("game over, press any key to restart");
 
         Sound("wrong");
         bodyBackground();
-        started = true
+
     }
 
 }
