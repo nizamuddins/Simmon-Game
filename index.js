@@ -38,6 +38,8 @@ body.click((e) => {
 
 })
 
+// KeyboardEvent
+
 body.keypress(() => {
 
     if (!started) {
@@ -54,7 +56,8 @@ let userClicked = [];
 
 buttons.click((e) => {
 
-    const butons = $(e.currentTarget).attr("id")
+    const butons = $(e.target).attr("id")
+
     userClicked.push(butons);
 
     Sound(butons);
@@ -76,6 +79,7 @@ function correctSequence(current) {
     } else {
         level = 0;
         started = false
+        gamePattern = [];
         head.text("game over, press any key to restart");
 
         Sound("wrong");
