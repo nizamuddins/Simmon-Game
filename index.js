@@ -75,6 +75,7 @@ function correctSequence(current) {
 
     } else {
         level = 0;
+        started = false
         head.text("game over, press any key to restart");
 
         Sound("wrong");
